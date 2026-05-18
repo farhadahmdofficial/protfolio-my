@@ -40,7 +40,5 @@ The system dynamic catalog indexes the following core engineering deployments:
 
 To clone and spin up this environment locally on your workstation, follow these pipeline instructions:
 
-1. Clone the repository to your local directory:
-   ```bash
-   git clone [https://github.com/farhadahmdofficial/protfolio-my.git](https://github.com/farhadahmdofficial/protfolio-my.git)
+
   
