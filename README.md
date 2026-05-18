@@ -42,4 +42,5 @@ To clone and spin up this environment locally on your workstation, follow these 
 
 1. Clone the repository to your local directory:
    ```bash
-   git clone [https://github.com/farhadahmdofficial/YOUR_REPO_NAME.git](https://github.com/farhadahmdofficial/YOUR_REPO_NAME.git)
+   git clone [https://github.com/farhadahmdofficial/protfolio-my.git](https://github.com/farhadahmdofficial/protfolio-my.git)
+  
