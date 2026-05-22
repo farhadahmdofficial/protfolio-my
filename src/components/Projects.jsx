@@ -17,9 +17,22 @@ import qurbanip from "@/assets/projects/tt.png";
 import digitools from "@/assets/projects/digitools.png";
 import keenkeeper from "@/assets/projects/keenkeper.png";
 import issu from "@/assets/projects/issu.png";
+import cars from "@/assets/projects/cars.png";
+
 
 // ১. আপনার নিজের প্রজেক্টের ডাটাবেস (গিটহাব এবং লাইভ লিংক সহ)
 const myProjectsData = [
+  {
+    id: "DriveFlee",
+    title: "DriveFlee",
+    description: "🏎️⚡ DriveFleet – A Modern Car Rental & Fleet Management Matrix!",
+    category: "Full-Stack",
+    year: "2026",
+    image: cars,
+    tags: ["Next.js", "MongoDB", "Better Auth", "Tailwind CSS", "HereUI", " React Hot Toast"],
+    githubUrl: "https://github.com/farhadahmdofficial/font-car-rental", // গিটহাব লিংক (যদি থাকে)
+    liveUrl: "https://font-car-rental.vercel.app" // লাইভ লিংক
+  },
   {
     id: "qurbanihat",
     title: "QurbaniHat",
@@ -34,13 +47,25 @@ const myProjectsData = [
     githubUrl: "https://github.com/farhadahmdofficial/qurbanihat-livestock-booking-by-farhad", // গিটহাব লিংক
     liveUrl: "https://qurbanihat-livestock-booking-by-far-pi.vercel.app/" // লাইভ ডোমেন লিংক (এখানে আপনার অরিজিনাল লিংক বসিয়ে দিন)
   },
-  {
+
+  // {
+  //   id: "DriveFlee",
+  //   title: "DriveFlee",
+  //   description: "🏎️⚡ DriveFleet – A Modern Car Rental & Fleet Management Matrix!",
+  //   category: "Full-Stack",
+  //   year: "2026",
+  //   image: cars,
+  //   tags: ["Next.js", "MongoDB", "Better Auth", "Tailwind CSS", "HereUI", " React Hot Toast"],
+  //   githubUrl: "https://github.com/farhadahmdofficial/font-car-rental", // গিটহাব লিংক (যদি থাকে)
+  //   liveUrl: "https://font-car-rental.vercel.app" // লাইভ লিংক
+  // },
+   {
     id: "digitools",
     title: "DigiTools",
     description: "A premium, high-performance platform for discovering and exploring modern digital tools. Built with absolute focus on fluid user interfaces and structural breakdown.",
     category: "Frontend",
     year: "2026",
-    image: digitools, 
+    image: digitools,
     tags: ["React", "JavaScript (ES6+)", "Tailwind CSS", "daisyUI"],
     githubUrl: "https://github.com/farhadahmdofficial/my-assignment6-digtools-2026", // গিটহাব লিংক
     liveUrl: "https://farhad-my-assingnment-6-digtools.netlify.app/" // লাইভ ডোমেন লিংক (এখানে আপনার অরিজিনাল লিংক বসিয়ে দিন)
@@ -51,7 +76,7 @@ const myProjectsData = [
     description: "A production-grade task management system deploying dynamic state routers to track operations, lifecycle events, and individual flow updates flawlessly.",
     category: "Frontend",
     year: "2026",
-    image: keenkeeper, 
+    image: keenkeeper,
     tags: ["React", "React Router", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/farhadahmdofficial/keenkeper-by-react", // গিটহাব লিংক (যদি থাকে)
     liveUrl: "https://keen-keper-by-farhad-reactrouter.netlify.app/" // লাইভ লিংক
@@ -62,11 +87,22 @@ const myProjectsData = [
     description: "🛠️ GitHub Issue Tracker — Core System Architecture",
     category: "Frontend",
     year: "2026",
-    image: issu, 
+    image: issu,
     tags: ["React", "React Router", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/farhadahmdofficial/issue-tracker-by-farhad", // গিটহাব লিংক (যদি থাকে)
     liveUrl: "https://farhadahmdofficial.github.io/issue-tracker-by-farhad/home.html" // লাইভ লিংক
-  }
+  },
+  // {
+  //   id: "DriveFlee",
+  //   title: "DriveFlee",
+  //   description: "🏎️⚡ DriveFleet – A Modern Car Rental & Fleet Management Matrix!",
+  //   category: "Full-Stack",
+  //   year: "2026",
+  //   image: issu,
+  //   tags: ["Next.js", "MongoDB", "Better Auth", "Tailwind CSS", "HereUI", " React Hot Toast"],
+  //   githubUrl: "https://github.com/farhadahmdofficial/font-car-rental", // গিটহাব লিংক (যদি থাকে)
+  //   liveUrl: "https://font-car-rental.vercel.app" // লাইভ লিংক
+  // }
 ];
 
 const categories = ["All", "Frontend", "Full-Stack"];
@@ -75,8 +111,8 @@ export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects = useMemo(() => {
-    return activeCategory === "All" 
-      ? myProjectsData 
+    return activeCategory === "All"
+      ? myProjectsData
       : myProjectsData.filter((project) => project.category === activeCategory);
   }, [activeCategory]);
 
@@ -92,12 +128,12 @@ export default function Projects() {
         <motion.p variants={fadeUp} className="text-xs font-mono uppercase tracking-[0.3em] text-[#00ffcc]">
           03 — Selected Portfolio
         </motion.p>
-        
+
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <motion.h2 variants={fadeUp} className="text-3xl sm:text-4xl font-black tracking-tight text-white max-w-3xl">
             Selected work with premium execution and structural clarity.
           </motion.h2>
-          
+
           <motion.div variants={fadeUp} className="flex w-fit flex-wrap gap-2 rounded-full border border-white/5 bg-white/[0.02] p-1.5 backdrop-blur-md">
             {categories.map((category) => (
               <button
@@ -135,37 +171,37 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/40 to-transparent" />
               </div>
-              
+
               <div className="space-y-4 p-6">
                 <div className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#00ffcc]">
                   {String(index + 1).padStart(2, "0")} · {project.year}
                 </div>
-                
+
                 <h3 className="text-xl font-bold tracking-tight text-white group-hover:text-[#00ffcc] transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-sm leading-relaxed text-gray-400 group-hover:text-gray-300 transition-colors">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {project.tags.map((tag) => (
-                    <span 
-                      key={tag} 
+                    <span
+                      key={tag}
                       className="rounded-full border border-white/5 bg-white/[0.02] px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-gray-500 group-hover:border-[#00ffcc]/10 group-hover:text-gray-400 transition-all"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                
+
                 {/* FIXED: এখানে দুটি আলাদা বাটন যোগ করা হয়েছে (GitHub ও Live Link) 
                   সায়ান গ্লো ইফেক্ট ও রেসপন্সিভ স্টাইলিং সহ।
                 */}
                 <div className="flex flex-wrap gap-4 pt-3 border-t border-white/5 mt-4">
                   {/* গিটহাব সোর্স কোড বাটন */}
-                  <a 
+                  <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -175,7 +211,7 @@ export default function Projects() {
                   </a>
 
                   {/* লাইভ প্রজেক্ট প্রিভিউ বাটন */}
-                  <a 
+                  <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
